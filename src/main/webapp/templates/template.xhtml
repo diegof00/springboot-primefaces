@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+    <title><ui:insert name="title">Spring boot primefaces</ui:insert></title>
+    <link rel="stylesheet" href="#{resource['css/styles.css']}" />
+</h:head>
+<h:body>
+
+    <div class="grid-container">
+        <header class="header">
+            <ui:include src="header.xhtml" />
+        </header>
+
+        <aside class="sidebar">
+            <ui:include src="sidebar.xhtml" />
+        </aside>
+
+        <main class="main-content">
+            <ui:insert name="content">
+                <h:outputText value="contenido predeterminado si no se define otro"/>
+            </ui:insert>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ui:include src="footer.xhtml" />
+        </footer>
+    </div>
+
+</h:body>
+</html>
